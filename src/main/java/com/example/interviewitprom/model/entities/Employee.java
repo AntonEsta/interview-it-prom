@@ -9,5 +9,4 @@ public class Employee {
   Profession profession;
   Department department;
   String note;
-
 }

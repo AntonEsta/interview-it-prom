@@ -1,8 +1,9 @@
-package com.example.interviewitprom.application;
+package com.example.interviewitprom.application.directories.professions;
 
-import com.example.interviewitprom.application.dto.ProfessionMapper;
+import com.example.interviewitprom.application.mappers.ProfessionMapper;
 import com.example.interviewitprom.model.entities.Profession;
-import com.example.interviewitprom.repositories.entities.ProfessionsRepository;
+import com.example.interviewitprom.repositories.ProfessionsRepository;
+import jakarta.annotation.Nullable;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -16,13 +17,22 @@ public class ProfessionsSearchService
     implements ProfessionsDirectorySearchService {
 
   private final ProfessionsRepository repository;
+  private final ProfessionMapper professionMapper;
+
 
   @Override
   public List<Profession> getAll() {
     var professionsEntity = repository.findAll();
     return professionsEntity.stream()
-              .map(ProfessionMapper.INSTANCE::entityToProfession)
+              .map(professionMapper::entityTo)
               .toList();
+  }
+
+  @Override
+  public @Nullable Profession getById(long id) {
+    var professionEntity = repository.findById(id);
+    return professionEntity.map(professionMapper::entityTo)
+        .orElse(null);
   }
 
 }

@@ -2,12 +2,19 @@ package com.example.interviewitprom.application.dto;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.example.interviewitprom.application.mappers.EmployeeMapper;
 import com.example.interviewitprom.repositories.entities.DepartmentEntity;
 import com.example.interviewitprom.repositories.entities.EmployeeEntity;
 import com.example.interviewitprom.repositories.entities.ProfessionEntity;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
+@SpringBootTest
 class EmployeeMapperTest {
+
+  @Autowired
+  EmployeeMapper employeeMapper;
 
   @Test
   void entityToEmployee() {
@@ -28,12 +35,10 @@ class EmployeeMapperTest {
     employeeEntity.setDepartment(departmentEntity);
     employeeEntity.setNote("Simple note!");
 
-    var employee = EmployeeMapper.INSTANCE.entityToEmployee(employeeEntity);
+    var employee = employeeMapper.entityTo(employeeEntity);
 
     assertEquals(employeeEntity.getId(), employee.getId());
     assertEquals(employeeEntity.getFio(), employee.getFio());
-//    assertEquals(employeeEntity.getProfession(), employee.getProfession());
-//    assertEquals(employeeEntity.getDepartment(), employee.getDepartment());
     assertEquals(employeeEntity.getNote(), employee.getNote());
 
   }

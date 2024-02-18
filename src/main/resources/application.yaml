@@ -8,6 +8,11 @@ spring:
     defer-datasource-initialization: true
     hibernate:
       ddl-auto: create
-server:
-  error:
-    include-stacktrace: NEVER
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /v1/api-docs
+#server:
+#  error:
+#    include-stacktrace: NEVER
