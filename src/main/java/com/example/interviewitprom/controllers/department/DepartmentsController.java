@@ -1,13 +1,10 @@
 package com.example.interviewitprom.controllers.department;
 
-import com.example.interviewitprom.application.directories.DepartmentsDirectoryCrudService;
-import com.example.interviewitprom.application.directories.departments.DepartmentsDirectorySearchService;
+import com.example.interviewitprom.application.directories.departments.services.crud.DepartmentsDirectoryCrudService;
+import com.example.interviewitprom.application.directories.departments.services.search.DepartmentsDirectorySearchService;
 import com.example.interviewitprom.controllers.department.dto.DepartmentRequestDto;
 import com.example.interviewitprom.controllers.department.mappers.DepartmentRequestMapper;
-import com.example.interviewitprom.controllers.employee.dto.EmployeeRequestDto;
-import com.example.interviewitprom.controllers.employee.mappers.EmployeeRequestMapper;
 import com.example.interviewitprom.model.entities.Department;
-import com.example.interviewitprom.model.entities.Employee;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.NonNull;

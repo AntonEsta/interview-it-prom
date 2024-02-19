@@ -2,7 +2,7 @@ package com.example.interviewitprom.application.dto;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import com.example.interviewitprom.application.mappers.EmployeeMapper;
+import com.example.interviewitprom.repositories.entities.mappers.EmployeeMapper;
 import com.example.interviewitprom.repositories.entities.DepartmentEntity;
 import com.example.interviewitprom.repositories.entities.EmployeeEntity;
 import com.example.interviewitprom.repositories.entities.ProfessionEntity;

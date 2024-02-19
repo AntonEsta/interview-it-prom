@@ -1,6 +1,6 @@
-package com.example.interviewitprom.application.directories.departments;
+package com.example.interviewitprom.application.directories.departments.services.search;
 
-import com.example.interviewitprom.application.mappers.DepartmentMapper;
+import com.example.interviewitprom.repositories.entities.mappers.DepartmentMapper;
 import com.example.interviewitprom.model.entities.Department;
 import com.example.interviewitprom.repositories.DepartmentsRepository;
 import jakarta.annotation.Nullable;

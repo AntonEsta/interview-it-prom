@@ -1,6 +1,6 @@
-package com.example.interviewitprom.application.directories.professions;
+package com.example.interviewitprom.application.directories.professions.services.search;
 
-import com.example.interviewitprom.application.mappers.ProfessionMapper;
+import com.example.interviewitprom.repositories.entities.mappers.ProfessionMapper;
 import com.example.interviewitprom.model.entities.Profession;
 import com.example.interviewitprom.repositories.ProfessionsRepository;
 import jakarta.annotation.Nullable;
@@ -14,7 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @Service
 public class ProfessionsSearchService
-    implements ProfessionsDirectorySearchService {
+    extends ProfessionsDirectorySearchService {
 
   private final ProfessionsRepository repository;
   private final ProfessionMapper professionMapper;

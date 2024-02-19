@@ -1,18 +1,16 @@
-package com.example.interviewitprom.application.directories;
+package com.example.interviewitprom.application.directories.departments.services.crud;
 
-import com.example.interviewitprom.application.mappers.EntityMapper;
+import com.example.interviewitprom.repositories.entities.mappers.EntityMapper;
 import com.example.interviewitprom.model.entities.Department;
-import com.example.interviewitprom.model.entities.Employee;
 import com.example.interviewitprom.repositories.entities.DepartmentEntity;
-import com.example.interviewitprom.repositories.entities.EmployeeEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DepartmentsDirectoryCrudService
-    extends JpaDirectoryCrudService<Department, DepartmentEntity> {
+public class DepartmentsDirectoryCrudServiceImpl
+    extends DepartmentsDirectoryCrudService {
 
-  public DepartmentsDirectoryCrudService(
+  public DepartmentsDirectoryCrudServiceImpl(
       JpaRepository<DepartmentEntity, Long> repository,
       EntityMapper<Department, DepartmentEntity> entityMapper) {
     super(repository, entityMapper);

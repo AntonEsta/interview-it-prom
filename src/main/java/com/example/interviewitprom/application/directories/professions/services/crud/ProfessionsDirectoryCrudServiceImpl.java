@@ -1,16 +1,16 @@
-package com.example.interviewitprom.application.directories;
+package com.example.interviewitprom.application.directories.professions.services.crud;
 
-import com.example.interviewitprom.application.mappers.EntityMapper;
+import com.example.interviewitprom.repositories.entities.mappers.EntityMapper;
 import com.example.interviewitprom.model.entities.Profession;
 import com.example.interviewitprom.repositories.entities.ProfessionEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ProfessionDirectoryCrudService
-    extends JpaDirectoryCrudService<Profession, ProfessionEntity> {
+public class ProfessionsDirectoryCrudServiceImpl
+    extends ProfessionsDirectoryCrudService {
 
-  public ProfessionDirectoryCrudService(
+  public ProfessionsDirectoryCrudServiceImpl(
       JpaRepository<ProfessionEntity, Long> repository,
       EntityMapper<Profession, ProfessionEntity> entityMapper) {
     super(repository, entityMapper);

@@ -1,7 +1,7 @@
 package com.example.interviewitprom.controllers.employee.mappers;
 
-import com.example.interviewitprom.application.directories.departments.DepartmentsSearchService;
-import com.example.interviewitprom.application.directories.professions.ProfessionsSearchService;
+import com.example.interviewitprom.application.directories.departments.services.search.DepartmentsSearchService;
+import com.example.interviewitprom.application.directories.professions.services.search.ProfessionsSearchService;
 import com.example.interviewitprom.controllers.employee.dto.EmployeeRequestDto;
 import com.example.interviewitprom.model.entities.Employee;
 import org.mapstruct.Mapper;

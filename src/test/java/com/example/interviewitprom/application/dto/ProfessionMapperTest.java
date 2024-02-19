@@ -2,7 +2,7 @@ package com.example.interviewitprom.application.dto;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.example.interviewitprom.application.mappers.ProfessionMapper;
+import com.example.interviewitprom.repositories.entities.mappers.ProfessionMapper;
 import com.example.interviewitprom.repositories.entities.ProfessionEntity;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

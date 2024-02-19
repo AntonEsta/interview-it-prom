@@ -1,7 +1,7 @@
 package com.example.interviewitprom.controllers.employee;
 
-import com.example.interviewitprom.application.directories.EmployeesDirectoryCrudService;
-import com.example.interviewitprom.application.directories.employees.EmployeesDirectorySearchService;
+import com.example.interviewitprom.application.directories.employees.services.crud.EmployeesDirectoryCrudService;
+import com.example.interviewitprom.application.directories.employees.services.search.EmployeesDirectorySearchService;
 import com.example.interviewitprom.controllers.employee.dto.EmployeeRequestDto;
 import com.example.interviewitprom.controllers.employee.mappers.EmployeeRequestMapper;
 import com.example.interviewitprom.model.entities.Employee;

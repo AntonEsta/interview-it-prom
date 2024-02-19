@@ -1,8 +1,7 @@
 package com.example.interviewitprom.controllers.professions;
 
-import com.example.interviewitprom.application.directories.ProfessionDirectoryCrudService;
-import com.example.interviewitprom.application.directories.interfaces.DirectoryCrudService;
-import com.example.interviewitprom.application.directories.professions.ProfessionsDirectorySearchService;
+import com.example.interviewitprom.application.directories.professions.services.crud.ProfessionsDirectoryCrudService;
+import com.example.interviewitprom.application.directories.professions.services.search.ProfessionsDirectorySearchService;
 import com.example.interviewitprom.controllers.professions.dto.ProfessionRequestDto;
 import com.example.interviewitprom.controllers.professions.mappers.ProfessionRequestMapper;
 import com.example.interviewitprom.model.entities.Profession;
@@ -23,7 +22,7 @@ import java.util.List;
 @RequestMapping("/api/v1/professions")
 public class ProfessionsController {
 
-  private final ProfessionDirectoryCrudService professionsService;
+  private final ProfessionsDirectoryCrudService professionsService;
   private final ProfessionsDirectorySearchService professionsSearchService;
   private final ProfessionRequestMapper professionRequestMapper;
 

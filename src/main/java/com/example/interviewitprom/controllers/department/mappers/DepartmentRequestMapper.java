@@ -1,6 +1,6 @@
 package com.example.interviewitprom.controllers.department.mappers;
 
-import com.example.interviewitprom.application.directories.departments.DepartmentsSearchService;
+import com.example.interviewitprom.application.directories.departments.services.search.DepartmentsSearchService;
 import com.example.interviewitprom.controllers.department.dto.DepartmentRequestDto;
 import com.example.interviewitprom.model.entities.Department;
 import org.mapstruct.Mapper;
